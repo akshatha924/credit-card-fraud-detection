@@ -1,62 +1,65 @@
 # credit-card-fraud-detection
 A data analytics project to detect fraudulent credit card transactions using Python and machine learning
-# 💳 Credit Card Fraud Detection using Machine Learning
+# 💳 Credit Card Fraud Detection
 
-This project aims to detect fraudulent credit card transactions using machine learning techniques. Due to a significant class imbalance in real-world data, special attention is given to handling rare fraud cases.
+This project is a beginner-friendly Data Analytics task that uses Machine Learning to detect fraudulent credit card transactions. It is based on an imbalanced dataset and includes data preprocessing, model building, and evaluation.
 
----
-
-## 📊 Dataset
+## 📁 Dataset
 
 - **Source**: [Kaggle - Credit Card Fraud Detection](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud)
-- **Records**: 284,807 transactions
-- **Fraud Cases**: 492 (~0.17%)
-- **Attributes**: 30 features (including `Time`, `Amount`, and anonymized PCA-transformed columns `V1` to `V28`)
+- **Rows**: 284,807 transactions
+- **Fraudulent**: 492 (0.17%)
+- **Legitimate**: 284,315 (99.83%)
 
----
-
-## ⚙️ Technologies Used
+## 🛠 Tools & Technologies
 
 - Python
+- VS Code
 - Pandas, NumPy
 - Scikit-learn
-- Matplotlib & Seaborn
-- SMOTE (Synthetic Minority Oversampling Technique)
-- VS Code
-- Git & GitHub
+- Matplotlib, Seaborn
+- SMOTE (for handling class imbalance)
 
----
+## 🧪 Steps Performed
 
-## 🔍 Problem Statement
+1. **Data Cleaning & Exploration**
+   - Null value check
+   - Class imbalance analysis
 
-Fraudulent transactions represent less than 0.2% of the total. This project focuses on:
+2. **Data Preprocessing**
+   - Feature scaling using StandardScaler
+   - Train-Test split
 
-- Cleaning and preprocessing data
-- Balancing the dataset using SMOTE
-- Training machine learning models
-- Evaluating model performance with metrics like precision, recall, and F1-score
+3. **Handling Imbalanced Data**
+   - Used **SMOTE** to oversample the minority class
 
----
+4. **Model Building**
+   - Logistic Regression
+   - Random Forest (optional)
+   - Evaluation using:
+     - Confusion Matrix
+     - Classification Report (Precision, Recall, F1-Score)
 
-## 🧪 Models Trained
+## 📊 Output Examples
 
-- Logistic Regression
-- Random Forest
-- Decision Tree
-- K-Nearest Neighbors (KNN)
+| Class Distribution | Before SMOTE | After SMOTE |
+|-------------------|--------------|-------------|
+| Fraudulent (1)    | 492          | 284,315     |
+| Legitimate (0)    | 284,315      | 284,315     |
 
----
+### Confusion Matrix
+![Confusion Matrix](screenshots/confusion_matrix.png)
 
-## 📈 Performance Metrics
+### Classification Report
+Precision, Recall, F1-Score, and Accuracy.
 
-Due to imbalance, **accuracy** is not enough. Hence we focus on:
+## 📌 Conclusion
 
-- Precision
-- Recall
-- F1-Score
-- ROC AUC Curve
+This project demonstrates how machine learning can be applied to detect fraud with high precision, even with imbalanced data. SMOTE significantly improved model performance by balancing the dataset.
 
----
+## 🧑‍💻 Author
 
-## 📁 Project Structure
-
+**Akshatha B**  
+Computer Science Student | Aspiring Data Analyst  
+🔗 [LinkedIn](www.linkedin.com/in/
+akshatha-b-347a22328)  
